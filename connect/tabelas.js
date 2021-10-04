@@ -10,7 +10,9 @@ class Tabelas {
             + 'pet VARCHAR(255), ' 
             + 'servico VARCHAR(255), '
             + 'status VARCHAR(255) NOT NULL, ' 
-            + 'observacoes text, PRIMARY KEY(id))'
+            + 'observacoes text, PRIMARY KEY(id), ' 
+            + 'data datetime NOT NULL, ' 
+            + 'dataCriacao datetime NOT NULL)'
         this.conexao.query(sql, (erro) => {
             if (!erro) {
                 console.log('tabela atendimentos criada com sucesso')
